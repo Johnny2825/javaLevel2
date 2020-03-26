@@ -1,4 +1,4 @@
-public class Robot implements jumping, running{
+public class Robot implements Jumping, Running{
     private String name;
     private int canRun;
     private int canJump;

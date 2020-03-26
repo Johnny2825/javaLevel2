@@ -1,4 +1,4 @@
-public class Human extends LivingThing implements jumping, running {
+public class Human extends LivingThing implements Jumping, Running {
 
     public Human(String name, int height, int length){
         super(name);

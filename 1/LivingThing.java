@@ -12,10 +12,10 @@ public abstract class LivingThing {
     }
 }
 
-interface running{
+interface Running{
     void running(int length);
 }
 
-interface jumping{
+interface Jumping{
     void jumping(int height);
 }

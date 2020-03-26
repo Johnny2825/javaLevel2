@@ -1,4 +1,4 @@
-public class Cat extends LivingThing implements jumping, running{
+public class Cat extends LivingThing implements Jumping, Running{
 
     public Cat(String name, int height, int length) {
         super(name);
