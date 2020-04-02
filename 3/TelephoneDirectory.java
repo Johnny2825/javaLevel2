@@ -1,29 +1,23 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class TelephoneDirectory {
-    private LinkedHashMap<Integer, String> telDic = new LinkedHashMap<>();
+    private Map<String, String> telDic = new HashMap<>();
 
-    public LinkedHashMap<Integer, String> getTelDic() {
-        return this.telDic;
+    public Map<String, String> getTelDic() {
+        return telDic;
     }
 
-    public void add(Integer number, String surname) {
-        telDic.put(number, surname);
+
+    public void add(String number, String surname) {
+        if(telDic.get(surname) != null){
+            telDic.put(surname, telDic.get(surname) + ", " + number);
+        } else {
+            telDic.put(surname, number);
+        }
+
     }
 
     public void get(String surname) {
-        ArrayList<Integer> number = new ArrayList<>();
-        ArrayList<Integer> keys = new ArrayList<>(telDic.keySet());
-        for(Integer i : keys) {
-            if (telDic.get(i).equals(surname)) {
-                number.add(i);
-            }
-        }
-        for(Integer i : number){
-            System.out.println(surname + " - " + i + ";");
-        }
-
+        System.out.println(surname + " - " + telDic.get(surname));
     }
 }

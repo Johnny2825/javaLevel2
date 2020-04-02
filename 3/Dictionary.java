@@ -1,14 +1,17 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Dictionary {
     public static void main(String[] args) {
-       firstTask();
-       secondTask();
+        firstTask();
+        secondTask();
     }
 
     public static void  firstTask(){
-        ArrayList<String> dic = new ArrayList<>();
+
+        List<String> dic = new ArrayList<>();
         dic.add("A");
         dic.add("B");
         dic.add("C");
@@ -26,7 +29,8 @@ public class Dictionary {
         dic.add("H");
         dic.add("A");
         System.out.println(dic);
-        HashMap<String, Integer> hM = new HashMap<String, Integer>();
+
+        Map<String, Integer> hM = new HashMap<>();
 
         for(String i : dic){
             if(!hM.containsKey(i)){
@@ -40,16 +44,16 @@ public class Dictionary {
 
     public static void secondTask(){
         TelephoneDirectory secTask = new TelephoneDirectory();
-        secTask.add(234231, "Petrov");
-        secTask.add(234253, "Ivanov");
-        secTask.add(777455, "Serov");
-        secTask.add(432666, "Petrov");
-        secTask.add(211797, "Suchkov");
-        secTask.add(435765, "Petrov");
-        secTask.add(777777, "Ivanov");
+        secTask.add("234231", "Petrov");
+        secTask.add("234253", "Ivanov");
+        secTask.add("777455", "Serov");
+        secTask.add("432666", "Petrov");
+        secTask.add("211797", "Suchkov");
+        secTask.add("435765", "Petrov");
+        secTask.add("777777", "Ivanov");
 
         System.out.println(secTask.getTelDic());
 
-        secTask.get("Ivanov");
+        secTask.get("Petrov");
     }
 }
