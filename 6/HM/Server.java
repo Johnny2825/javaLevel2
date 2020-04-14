@@ -27,8 +27,9 @@ public class Server {
             new Thread(() -> {
                 try {
                     out.writeUTF("Соединение установлено");
+                    String str;
                     while (true){
-                        String str = inputFromKeyboard();
+                        str = inputFromKeyboard();
                         if(!str.equals("")){out.writeUTF(str); }
                         if(str.equals("/End")){
                             System.out.println("Вы закрыли соединение");
@@ -43,8 +44,9 @@ public class Server {
 
             new Thread(() -> {
                 try {
+                    String str;
                     while (true){
-                        String str = in.readUTF();
+                        str = in.readUTF();
                         if(str.equals("/End")){
                             System.out.println("Клиент закрыл соединение");
                             close(in, out, socket);
